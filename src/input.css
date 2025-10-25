@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #dc143c !important;
+}
+
+.swiper-container2 img{
+   @apply mx-auto scale-90 blur-sm transition-transform translate-y-[-60px];
+}
+
+.swiper-container2 .swiper-slide-prev img,
+.swiper-container2 .swiper-slide-next img{
+    @apply scale-90 blur-[2px] transition-all translate-y-[90px];
+}
+
+.swiper-container2 .swiper-slide-active img{
+    @apply scale-120 blur-none transition-all translate-y-[140px];
+}
