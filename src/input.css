@@ -66,3 +66,28 @@
 .roller-blades {
     animation: rollBladesMove 6s linear infinite;
 }
+
+@media(max-width: 768px) {
+    .navbar {
+        position: fixed;
+        background-color: #dc143c;
+        height: 100vh;
+        top: 0;
+        width: 50%;
+        left: 0;
+        transform: translateX(-100%);
+        border-radius: 0 2rem 2rem 0;
+        border-right: 1px dashed white;
+        transition: all 0.5s ease;
+    }
+
+    .active-nav {
+        transform: translateX(0);
+    }
+}
+
+@media(max-width:640px) {
+    .navbar {
+        width: 100%;
+    }
+}

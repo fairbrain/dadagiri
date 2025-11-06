@@ -10,14 +10,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="min-h-screen font-poppins">
-    <header class="fixed top-10 w-full z-50">
-        <div class="container mx-auto px-4">
+    <header class="fixed lg:top-10 top-5 w-full z-50">
+        <div class="container mx-auto px-4 ">
             <!-- Navigation Menu -->
-            <nav>
-                <ul class="flex justify-around items-center px-5 h-15 bg-red-500 text-white rounded-3xl font-notable">
+            <nav class="bg-[#dc143c] rounded-3xl lg:border-0 border border-white shadow">
+                <a href="#" class="transition-all hover:scale-95 inline-block lg:hidden">
+                    <img src="./img/logo/Top Logo.png" alt="Logo"
+                        class="xl:h-[100px] lg:h-[80px] h-[50px] mt-1 px-3 animate__animated animate__pulse animate__slow animate__infinite">
+                </a>
+                <ul
+                    class="navbar flex justify-around items-center px-5 h-15  text-white  font-notable lg:flex-row flex-col md:gap-0 gap-4">
+
                     <li><a href="#" class="hover:text-[#fff200] transition-all hover:scale-95 inline-block">HOME</a>
                     </li>
                     <li><a href="#" class="hover:text-[#fff200] transition-all hover:scale-95 inline-block">ABOUT US</a>
@@ -27,9 +35,10 @@
                     <li><a href="#" class="hover:text-[#fff200] transition-all hover:scale-95 inline-block">GALLERY</a>
                     </li>
 
-                    <li>
+                    <li class="lg:block hidden">
                         <a href="#" class="transition-all hover:scale-95 inline-block">
-                            <img src="./img/logo/Top Logo.png" alt="Logo" class="xl:h-[100px] lg:h-15">
+                            <img src="./img/logo/Top Logo.png" alt="Logo"
+                                class="xl:h-[100px] lg:h-[80px] h-[50px] animate__animated animate__pulse animate__slow animate__infinite">
                         </a>
                     </li>
 
@@ -42,23 +51,27 @@
                     </li>
                     <li><a href="#" class="hover:text-[#fff200] transition-all hover:scale-95 inline-block">CONTACT
                             US</a></li>
+                    <li id="close-nav" class="lg:hidden absolute right-5 top-5 text-[#fff200] border border-dashed px-1 rounded-full"><i class="ri-arrow-left-line"></i></li>
                 </ul>
+                <button id="nav-toggler"
+                    class="active:scale-95 bg-[#fef300] px-3 rounded-xl lg:hidden float-end me-5 mt-4 font-black text-xl text-white shadow-lg border-2 border-white"><i
+                        class="ri-menu-fold-2-fill"></i></button>
             </nav>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-[#fef300] pt-[130px] pb-10 px-10">
+    <section class="relative bg-[#fef300] lg:pt-[130px] pt-[100px] lg:pb-10 pb-5 lg:px-10 px-2 w-full overflow-x-hidden">
         <div class="swiper-container1">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="./img/banners/M_D1.png" alt="Slide 1" class="w-full h-auto rounded-4xl">
+                    <img src="./img/banners/M_D1.png" alt="Slide 1" class="w-full h-auto lg:rounded-3xl rounded-xl">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./img/banners/M_D2.jpeg" alt="Slide 2" class="w-full h-auto rounded-4xl">
+                    <img src="./img/banners/M_D2.jpeg" alt="Slide 2" class="w-full h-auto lg:rounded-3xl rounded-xl">
                 </div>
                 <div class="swiper-slide">
-                    <img src="./img/banners/M_D3.jpeg" alt="Slide 3" class="w-full h-auto rounded-4xl">
+                    <img src="./img/banners/M_D3.jpeg" alt="Slide 3" class="w-full h-auto lg:rounded-3xl rounded-xl">
                 </div>
             </div>
             <div class="swiper-pagination1 absolute bottom-5"></div>
@@ -79,11 +92,11 @@
                         <div class="smile-box relative font-notable mx-auto md:mx-0">
                             <div
                                 class="smile-text text-center absolute rotate-[-15deg] top-[35%] left-1/2 -translate-x-1/2 w-full">
-                                <h2 class="text-3xl md:text-4xl font-black px-5 text-[#613f32]">
+                                <h2 class="text-3xl xl:text-4xl font-black px-5 text-[#613f32]">
                                     Snacks That <br>
                                     Bring Smiles
                                 </h2>
-                                <p class="text-[#f95169] text-xl">One Bite at a Time</p>
+                                <p class="text-[#f95169] xl:text-xl text-sm">One Bite at a Time</p>
                             </div>
                             <img src="./img/characters/smile.png" alt="smile">
                         </div>
@@ -91,14 +104,14 @@
                             <img src="./img/characters/cartoon.png" alt="cartoon">
                         </div>
                         <div class="right-charater-text text-center font-notable relative px-10">
-                            <p class="text-3xl text-[#623f34]">Khatta Meetha</p>
-                            <h2 class="text-4xl md:text-7xl font-extrabold text-[#d90f38]">
+                            <p class="xl:text-3xl text-2xl text-[#623f34]">Khatta Meetha</p>
+                            <h2 class="text-5xl xl:text-7xl font-extrabold text-[#d90f38]">
                                 Chanachur
                             </h2>
                             <img src="./img/characters/Lighting arrow.png" alt="lightning arrow"
-                                class="absolute -left-2 -bottom-20 md:w-25 rotate-[180deg]">
+                                class="absolute -left-2 xl:-bottom-20 -bottom-10 xl:w-25 w-15 rotate-[180deg]">
                             <img src="./img/characters/Lighting arrow.png" alt="lightning arrow"
-                                class="absolute -right-2 -top-15 md:w-25 rotate-[360deg]">
+                                class="absolute -right-2 xl:-top-15 -top-10 xl:w-25 w-15 rotate-[360deg]">
                         </div>
                     </div>
                 </div>
@@ -149,11 +162,11 @@
                         <div class="navigation-dishes">
 
                             <div
-                                class="swiper-button-prev-dishes  absolute left-[25%] top-[50%] -translate-y-1/2 z-20 cursor-pointer">
+                                class="swiper-button-prev-dishes  absolute xl:left-[25%] left-[30%] xl:top-[50%] top-[60%] -translate-y-1/2 z-20 cursor-pointer">
                                 <img src="./img/arrow.png" alt="arrow right" class="w-20 rotate-y-180">
                             </div>
                             <div
-                                class="swiper-button-next-dishes absolute right-[25%] top-[50%] -translate-y-1/2 z-20 cursor-pointer">
+                                class="swiper-button-next-dishes absolute xl:right-[25%] right-[30%] xl:top-[50%] top-[60%] -translate-y-1/2 z-20 cursor-pointer">
                                 <img src="./img/arrow.png" alt="arrow left" class="w-20">
                             </div>
 
@@ -686,7 +699,7 @@
                     slidesPerView: 1,
                 },
                 640: {
-                    slidesPerView: 2,
+                    slidesPerView: 5,
                 },
                 1024: {
                     slidesPerView: 5,
@@ -723,6 +736,7 @@
             },
         });
     </script>
+    <script src="./src/app.js"></script>
 </body>
 
 </html>
