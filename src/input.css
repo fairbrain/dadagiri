@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: Notable;
@@ -12,6 +12,7 @@
 
 @theme {
     --font-notable: Notable;
+    --font-playball: "Playball", cursive
 }
 
 .font-poppins {
@@ -21,6 +22,7 @@
 .font-notable {
     font-family: Notable;
 }
+
 
 .swiper-pagination-bullet-active {
     background-color: #dc143c !important;
@@ -53,6 +55,10 @@
     clip-path: polygon(0 9%, 100% 0, 82% 100%, 18% 99%);
 }
 
+.navbar li a.active{
+    color: #fff200;
+}
+
 @keyframes rollBladesMove {
     0% {
         transform: translateX(0) translateY(-45%);
@@ -65,6 +71,21 @@
 
 .roller-blades {
     animation: rollBladesMove 6s linear infinite;
+}
+
+.about-hero {
+    width: 100%;
+    background: url(../img/about/bg-top.png) no-repeat center/cover;
+}
+
+.about-details {
+    width: 100%;
+    background: url(../img/about/BG.jpg) no-repeat center/cover;
+}
+
+.crimson {
+    filter:
+        brightness(0) saturate(100%) invert(16%) sepia(94%) saturate(7495%) hue-rotate(338deg) brightness(92%) contrast(109%);
 }
 
 @media(max-width: 768px) {
